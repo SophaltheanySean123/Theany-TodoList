@@ -1,0 +1,11 @@
+<table>
+  <% @tasks.each do |task| %>
+    <tr id="task_<%= task.id %>">
+      <td><%= task.name %></td>
+      <td class="status"><%= task.is_completed ? 'Completed' : 'Incomplete' %></td>
+      <td>
+        <%= button_to 'Toggle Completed', toggle_completed_task_path(task), method: :patch, remote: true %>
+      </td>
+    </tr>
+  <% end %>
+</table>

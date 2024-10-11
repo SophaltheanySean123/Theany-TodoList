@@ -1,0 +1,10 @@
+<%= form_with(model: task, local: true) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all, :id, :name %>
+  
+    <%= form.submit %>
+  <% end %>
+  

@@ -1,0 +1,10 @@
+// Assuming each task row has an ID like 'task_<%= @task.id %>'
+var taskRow = document.getElementById('task_<%= @task.id %>');
+var statusText = "<%= @task.is_completed ? 'Completed' : 'Incomplete' %>";
+taskRow.querySelector('.status').textContent = statusText;
+// Find the task row by its ID
+var taskRow = document.getElementById('task_<%= @task.id %>');
+
+// Update the text content of the status cell
+var statusText = "<%= @task.is_completed ? 'Completed' : 'Incomplete' %>";
+taskRow.querySelector('.status').textContent = statusText;
